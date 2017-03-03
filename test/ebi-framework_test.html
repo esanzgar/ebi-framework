@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>ebi-framework test</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../ebi-framework.html">
+  </head>
+  <body>
+    <test-fixture id="basic">
+      <template>
+        <ebi-framework></ebi-framework>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('ebi-framework', function() {
+        test('instantiating the element works', function() {
+          var element = fixture('basic');
+          assert.equal(element.is, 'ebi-framework');
+        });
+      });
+    </script>
+  </body>
+</html>
